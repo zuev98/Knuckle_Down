@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context=".detailscreen.TaskDetailFragment">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:contentDescription="@string/list" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_task_height"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/enter_task">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/date_button_label"
+        android:labelFor="@id/date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/select_date"
+        android:textColor="?android:textColorPrimary"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:visibility="visible"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/date_button"
+        style="@style/Widget.KnuckleDown.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="DuplicateSpeakableTextCheck"
+        tools:text="@string/default_date" />
+
+    <TextView
+        android:id="@+id/time_button_label"
+        android:labelFor="@id/time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/select_time"
+        android:textColor="?android:textColorPrimary"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:visibility="visible"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/time_button"
+        style="@style/Widget.KnuckleDown.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="DuplicateSpeakableTextCheck"
+        tools:text="@string/default_time" />
+
+    <CheckBox
+        android:id="@+id/is_done"
+        style="@style/Widget.KnuckleDown.CompoundButton.CheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:text="@string/done"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:contentDescription="@string/save_task"
+        app:srcCompat="@drawable/ic_save_24"
+        app:tint="@color/white" />
+
+</LinearLayout>

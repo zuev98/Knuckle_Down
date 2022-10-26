@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/todayTaskListFragment">
+
+    <fragment
+        android:id="@+id/taskDetailFragment"
+        android:name="com.github.zuev98.knuckledown.detailscreen.TaskDetailFragment"
+        android:label="@string/task"
+        tools:layout="@layout/fragment_task_detail">
+        <argument
+            android:name="taskId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/selectDate"
+            app:destination="@id/datePickerFragment" />
+        <action
+            android:id="@+id/selectTime"
+            app:destination="@id/timePickerFragment" />
+        <action
+            android:id="@+id/launchPomodoro"
+            app:destination="@id/pomodoroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inboxTaskListFragment"
+        android:name="com.github.zuev98.knuckledown.listscreen.tasklist.lists.InboxTaskListFragment"
+        android:label="@string/inbox"
+        tools:layout="@layout/fragment_task_list">
+        <action
+            android:id="@+id/show_task_detail"
+            app:destination="@id/taskDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todayTaskListFragment"
+        android:name="com.github.zuev98.knuckledown.listscreen.tasklist.lists.TodayTaskListFragment"
+        android:label="@string/menu_today"
+        tools:layout="@layout/fragment_task_list">
+        <action
+            android:id="@+id/show_task_detail"
+            app:destination="@id/taskDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tomorrowTaskListFragment"
+        android:name="com.github.zuev98.knuckledown.listscreen.tasklist.lists.TomorrowTaskListFragment"
+        android:label="@string/menu_tomorrow"
+        tools:layout="@layout/fragment_task_list">
+        <action
+            android:id="@+id/show_task_detail"
+            app:destination="@id/taskDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionsTaskListFragment"
+        android:name="com.github.zuev98.knuckledown.listscreen.tasklist.lists.ActionsTaskListFragment"
+        android:label="@string/menu_actions"
+        tools:layout="@layout/fragment_task_list">
+        <action
+            android:id="@+id/show_task_detail"
+            app:destination="@id/taskDetailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/datePickerFragment"
+        android:name="com.github.zuev98.knuckledown.dialogs.DatePickerFragment"
+        android:label="DatePickerFragment" >
+        <argument
+            android:name="taskDate"
+            app:argType="java.util.Date" />
+    </dialog>
+    <dialog
+        android:id="@+id/timePickerFragment"
+        android:name="com.github.zuev98.knuckledown.dialogs.TimePickerFragment"
+        android:label="TimePickerFragment" >
+        <argument
+            android:name="taskTime"
+            app:argType="java.util.Date" />
+    </dialog>
+    <fragment
+        android:id="@+id/calendarTaskListFragment"
+        android:name="com.github.zuev98.knuckledown.listscreen.calendarlist.CalendarTaskListFragment"
+        android:label="@string/menu_calendar"
+        tools:layout="@layout/fragment_calendar_task_list">
+        <action
+            android:id="@+id/show_task_detail"
+            app:destination="@id/taskDetailFragment" />
+        <action
+            android:id="@+id/selectDate"
+            app:destination="@id/datePickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pomodoroFragment"
+        android:name="com.github.zuev98.knuckledown.pomodoro.PomodoroFragment"
+        android:label="@string/pomodoro_timer"
+        tools:layout="@layout/fragment_pomodoro"/>
+</navigation>

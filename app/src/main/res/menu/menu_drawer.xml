@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inboxTaskListFragment"
+            android:title="@string/inbox" />
+        <item
+            android:id="@+id/todayTaskListFragment"
+            android:title="@string/menu_today" />
+        <item
+            android:id="@+id/tomorrowTaskListFragment"
+            android:title="@string/menu_tomorrow" />
+        <item
+            android:id="@+id/calendarTaskListFragment"
+            android:title="@string/menu_calendar" />
+        <item
+            android:id="@+id/actionsTaskListFragment"
+            android:title="@string/menu_actions" />
+    </group>
+</menu>

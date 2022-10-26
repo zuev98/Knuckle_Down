@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tasks_date_btn"
+        style="@style/Widget.KnuckleDown.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginHorizontal="24dp"
+        tools:text="@string/default_date" />
+
+    <include
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        layout="@layout/recycler_view"/>
+
+    <include
+        android:id="@+id/fab"
+        layout="@layout/add_fab"/>
+
+</FrameLayout>

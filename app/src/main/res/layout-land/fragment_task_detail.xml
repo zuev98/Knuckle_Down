@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_marginBottom="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/enter_task"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:contentDescription="@string/list"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout"
+        app:layout_constraintTop_toTopOf="@id/text_input_layout" />
+
+    <TextView
+        android:id="@+id/date_button_label"
+        android:labelFor="@id/date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_date"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:textColor="?android:textColorPrimary"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/time_button_label"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/date_button"
+        style="@style/Widget.KnuckleDown.Button.OutlinedButton"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/date_button_label"
+        tools:text="@string/default_date" />
+
+    <TextView
+        android:id="@+id/time_button_label"
+        android:labelFor="@id/time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:text="@string/select_time"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        android:textColor="?android:textColorPrimary"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/date_button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/time_button"
+        style="@style/Widget.KnuckleDown.Button.OutlinedButton"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/time_button_label"
+        tools:text="@string/default_time" />
+
+    <CheckBox
+        android:id="@+id/is_done"
+        style="@style/Widget.KnuckleDown.CompoundButton.CheckBox"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/time_button" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:contentDescription="@string/save_task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_save_24"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

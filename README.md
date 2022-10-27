@@ -40,25 +40,25 @@ The app has been tested on various devices:
   - Pixel 5 (API 30, 6.0", 1080x2320)
   - Pixel 6 Pro (API 32, 6.7", 1440x3120)
   
-Below are screenshots from these devices. You can hover over the image to see which device it is. Dark theme enabled on some devices
+Below are screenshots from these devices. You can hover over the image to see which device it is. Dark theme enabled on some devices.
 <br />
 <p>
 <img src="./screenshots/ya_today_list.png" title="Yandex Phone" width="250" vspace="30" />
 <img src="./screenshots/ya_calend.png" title="Yandex Phone" width="250" vspace="30" hspace="30" />
-<img src="./screenshots/2_detail.png" title="Pixel 2" width="250" vspace="30" />
 </p>
-<p>
-<img src="./screenshots/6pro_detail_dark.png" title="Pixel 6 Pro" width="250" vspace="30" />
-<img src="./screenshots/5_calend_list_dark.png" title="Pixel 5" width="250" vspace="30" hspace="30" />
-<img src="./screenshots/huawei_side.jpg" title="Huawei Y5 2019" width="250" vspace="30" />
-</p>
-<p>
-<img src="./screenshots/5_side_land_dark.png" title="Pixel 5" height="220" vspace="30" />
 <img src="./screenshots/ya_calend_land_dark.png" title="Yandex Phone" height="220" vspace="30" hspace="30" />
+<p>
+<img src="./screenshots/2_detail.png" title="Pixel 2" width="250" vspace="30" />
+<img src="./screenshots/6pro_detail_dark.png" title="Pixel 6 Pro" width="250" vspace="30" hspace="30" />
 </p>
+<p>
+<img src="./screenshots/5_calend_list_dark.png" title="Pixel 5" width="250" vspace="30" />
+<img src="./screenshots/huawei_side.jpg" title="Huawei Y5 2019" width="250" vspace="30" hspace="30" />
+</p>
+<img src="./screenshots/5_side_land_dark.png" title="Pixel 5" height="220" vspace="30" hspace="30" />
 <p>
 <img src="./screenshots/huawei_inbox.jpg" title="Huawei Y5 2019" width="250" vspace="30" />
 <img src="./screenshots/xl_timer.png" title="Pixel XL" width="250" vspace="30" hspace="30" />
-<img src="./screenshots/xl_timer_land_dark.png" title="Pixel XL" height="220" vspace="30" />
 </p>
+<img src="./screenshots/xl_timer_land_dark.png" title="Pixel XL" height="220" vspace="30" />
 <img src="./screenshots/6pro_timer_land_dark.png" title="Pixel 6 Pro" height="220" vspace="30" />
